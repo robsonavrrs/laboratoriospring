@@ -1,0 +1,13 @@
+zuul:
+  routes:
+    stores: /stores/**
+    customers: /customers/**
+
+server:
+  port: 8765
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
+

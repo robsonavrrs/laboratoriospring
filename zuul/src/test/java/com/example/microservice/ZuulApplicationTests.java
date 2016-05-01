@@ -1,5 +1,6 @@
 package com.example.microservice;
 
+import com.example.microservice.zuul.ZuulApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.SpringApplicationConfiguration;
