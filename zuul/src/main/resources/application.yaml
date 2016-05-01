@@ -1,13 +1,14 @@
 zuul:
+  ignoredServices: "*"  
   routes:
-    stores: /stores/**
-    customers: /customers/**
-
+    persons:
+        path: /persons/**
+        serviceId: person-service
+        stripPrefix: false
 server:
   port: 8765
-  
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
-
+      defaultZone: ${EUREKA_URL:http://localhost:8761}/eureka/
+    registerWithEureka: true
